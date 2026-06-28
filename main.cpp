@@ -1,9 +1,10 @@
-#include "symlinks/CLI11/include/CLI/App.hpp"
-#include "symlinks/CLI11/include/CLI/Config.hpp"
-#include "symlinks/CLI11/include/CLI/Formatter.hpp"
-#include "symlinks/metrolib/core/Platform.h"
-#include "symlinks/metrolib/core/Tests.h"
-#include "riscv_constants.h"
+#include "CLI11/include/CLI/App.hpp"
+#include "CLI11/include/CLI/Config.hpp"
+#include "CLI11/include/CLI/Formatter.hpp"
+#include "metrolib/core/Platform.h"
+#include "metrolib/core/Tests.h"
+#include "rv32i/riscv_constants.h"
+#include "metron/examples/rvsimple/toplevel.h"
 
 #include <stdio.h>
 
@@ -49,7 +50,7 @@ struct MemState {
   union {
     uint32_t u32[16384];
     uint8_t  u8 [65536];
-  }
+ };
 };
 
 /*
